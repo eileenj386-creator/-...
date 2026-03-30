@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>انعكاس الذات</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- START SCREEN -->
+    <div id="startScreen" class="screen active">
+
+      <h1 class="title">انعكاس الذات</h1>
+
+      <p class="desc">
+       15 هذه ليست لعبة عادية… بل تجربة تقرأ ما لا يُقال.<br>
+    سؤالًا سيحددون حجرًا كريمًا يمثلك، مع تحليل لشخصيتك وقصيدة تعكس كيانك
+      </p>
+
+      <input id="nameInput" type="text" placeholder="اكتب اسمك..." />
+
+      <button onclick="startGame()">ابدأ الرحلة</button>
+
+      <div class="footer">صُنعت من طرف إيلين</div>
+    </div>
+
+    <!-- QUESTION SCREEN -->
+    <div id="questionScreen" class="screen">
+
+      <div id="questionBox" class="questionBox"></div>
+
+      <div class="btnRow">
+        <button onclick="answer(true)">نعم</button>
+        <button onclick="answer(false)">لا</button>
+      </div>
+
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- RESULT SCREEN -->
+    <div id="resultScreen" class="screen">
+
+      <h2 id="resultName"></h2>
+
+      <div class="gem">💎 <span id="gem"></span></div>
+
+      <div class="section">
+        <h3>التحليل</h3>
+        <p id="analysis"></p>
+      </div>
+
+      <div class="section">
+        <h3>قصيدة تمثل كيانك</h3>
+        <p id="poem"></p>
+      </div>
+
+      <button onclick="restartGame()">إعادة الاختبار</button>
+
+      <div class="footer">صُنعت من طرف إيلين</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
